@@ -1,0 +1,394 @@
+﻿/* Patient Details */
+
+.patient-details-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 32px;
+  background: #f7f8fa;
+}
+
+.details-back-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 24px;
+  color: #536174;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.details-back-button:hover {
+  color: #172033;
+}
+
+.details-header {
+  margin-bottom: 28px;
+}
+
+.patient-title-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.patient-large-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #e8f1ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #8a94a6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.patient-title-section h1 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 28px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #e8f8ef;
+  color: #16834d;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: none;
+}
+
+.details-card {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e8ebf0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(20, 30, 50, 0.03);
+}
+
+.details-card.schedule-card {
+  grid-column: 1 / -1;
+}
+
+.card-section-title {
+  margin-bottom: 8px;
+}
+
+.card-section-title span {
+  color: #8a94a6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.details-card h2 {
+  margin: 0 0 22px;
+  color: #172033;
+  font-size: 20px;
+}
+
+.patient-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 28px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item span {
+  color: #8a94a6;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.info-item strong {
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Nutrition plan */
+
+.nutrition-plan-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #f8fafc;
+  border: 1px solid #edf0f4;
+  border-radius: 12px;
+}
+
+.plan-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef5ff;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.plan-info {
+  min-width: 0;
+}
+
+.plan-info h3 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.plan-info p {
+  margin: 4px 0;
+  color: #6f7a8d;
+  font-size: 12px;
+}
+
+.plan-status {
+  color: #16834d;
+  font-weight: 600;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 16px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+/* Empty state */
+
+.empty-state {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.empty-icon {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.empty-state h3 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 15px;
+}
+
+.empty-state p {
+  max-width: 420px;
+  margin: 0 auto 18px;
+  color: #7b8494;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Reminder schedule */
+
+.schedule-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule-row {
+  width: 100%;
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 190px;
+  align-items: center;
+  column-gap: 24px;
+  padding: 15px 18px;
+  background: #fafbfc;
+  border: 1px solid #edf0f3;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.schedule-time {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.schedule-time span {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eef5ff;
+  color: #2563eb;
+  font-size: 16px;
+}
+
+.schedule-time strong {
+  color: #172033;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.schedule-content {
+  min-width: 0;
+}
+
+.schedule-content strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.schedule-content p {
+  margin: 0;
+  color: #7b8494;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.schedule-actions {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.repeat-badge,
+.whatsapp-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.repeat-badge {
+  background: #f0f2f5;
+  color: #596579;
+}
+
+.whatsapp-badge {
+  background: #e8f8ef;
+  color: #16834d;
+}
+
+/* Loading / error */
+
+.loading-state,
+.error-state {
+  padding: 40px;
+  color: #6f7a8d;
+  text-align: center;
+}
+
+.error-state {
+  color: #c0392b;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-card.schedule-card {
+    grid-column: auto;
+  }
+
+  .schedule-row {
+    grid-template-columns: 130px minmax(0, 1fr) 170px;
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .patient-details-main {
+    padding: 24px;
+  }
+
+  .patient-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .schedule-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .patient-details-main {
+    padding: 18px;
+  }
+
+  .details-card {
+    padding: 18px;
+  }
+
+  .patient-title-section h1 {
+    font-size: 24px;
+  }
+
+  .nutrition-plan-preview {
+    align-items: flex-start;
+  }
+}

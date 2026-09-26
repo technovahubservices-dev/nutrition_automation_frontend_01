@@ -1,0 +1,238 @@
+﻿.nutrition-upload-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f7f8fa;
+  color: #172033;
+}
+
+.nutrition-upload-header {
+  max-width: 850px;
+  margin: 0 auto 25px;
+}
+
+.upload-back-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 24px;
+  color: #536174;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upload-back-button:hover {
+  color: #172033;
+}
+
+.upload-eyebrow {
+  margin: 0 0 7px;
+  color: #7b8798;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nutrition-upload-header h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.upload-description {
+  max-width: 650px;
+  margin: 0;
+  color: #718096;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.upload-card {
+  max-width: 850px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(20, 30, 50, 0.05);
+}
+
+.upload-drop-zone {
+  border: 2px dashed #d8dde6;
+  border-radius: 16px;
+  padding: 48px 25px;
+  text-align: center;
+}
+
+.upload-file-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f6;
+  color: #172033;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.upload-drop-zone h2 {
+  margin: 0 0 7px;
+  font-size: 19px;
+}
+
+.upload-drop-zone p {
+  margin: 0 0 20px;
+  color: #7b8798;
+  font-size: 13px;
+}
+
+.choose-file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: #172033;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.choose-file-button:hover {
+  opacity: 0.9;
+}
+
+.selected-file {
+  max-width: 520px;
+  margin: 22px auto 0;
+  padding: 13px 15px;
+  border: 1px solid #e4e8ee;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.selected-file div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.selected-file strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.selected-file span {
+  color: #8a94a3;
+  font-size: 11px;
+}
+
+.remove-file-button {
+  border: none;
+  background: transparent;
+  color: #8a94a3;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.upload-error,
+.upload-success {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.upload-error {
+  background: #fff0ef;
+  color: #bd3e32;
+  border: 1px solid #ffd7d3;
+}
+
+.upload-success {
+  background: #edf9f1;
+  color: #21864b;
+  border: 1px solid #d1efd9;
+}
+
+.upload-info {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f7f8fa;
+}
+
+.upload-info strong {
+  font-size: 13px;
+}
+
+.upload-info p {
+  margin: 6px 0 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.upload-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.upload-cancel-button,
+.upload-submit-button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-cancel-button {
+  background: #eef0f4;
+  color: #536174;
+}
+
+.upload-submit-button {
+  background: #172033;
+  color: white;
+}
+
+.upload-submit-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .nutrition-upload-page {
+    padding: 20px;
+  }
+
+  .upload-card {
+    padding: 18px;
+  }
+
+  .upload-drop-zone {
+    padding: 35px 15px;
+  }
+
+  .upload-actions {
+    flex-direction: column-reverse;
+  }
+
+  .upload-cancel-button,
+  .upload-submit-button {
+    width: 100%;
+  }
+}

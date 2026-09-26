@@ -1,0 +1,300 @@
+﻿.nutrition-preview-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f7f8fa;
+  color: #172033;
+}
+
+.preview-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+}
+
+.preview-back-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 22px;
+  color: #536174;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.preview-eyebrow,
+.preview-card-eyebrow {
+  margin: 0 0 6px;
+  color: #7b8798;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.preview-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.preview-description {
+  max-width: 720px;
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.plan-summary {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 18px 22px;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.plan-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.plan-summary span {
+  color: #8a94a3;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.plan-summary strong {
+  font-size: 13px;
+}
+
+.preview-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(20, 30, 50, 0.04);
+}
+
+.preview-card-header {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.preview-card-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.add-schedule-button {
+  border: none;
+  border-radius: 9px;
+  padding: 10px 14px;
+  background: #172033;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.preview-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+}
+
+.preview-table th {
+  padding: 13px 14px;
+  background: #fafbfc;
+  color: #7b8798;
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.preview-table td {
+  padding: 12px 14px;
+  border-top: 1px solid #edf0f4;
+  vertical-align: middle;
+}
+
+.preview-table input,
+.preview-table select {
+  width: 100%;
+  min-width: 110px;
+  box-sizing: border-box;
+  border: 1px solid #dfe3e9;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: white;
+  color: #253044;
+  font-size: 12px;
+  outline: none;
+}
+
+.preview-table input:focus,
+.preview-table select:focus {
+  border-color: #8b95a5;
+}
+
+.whatsapp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.whatsapp-toggle input {
+  width: auto;
+  min-width: auto;
+}
+
+.remove-row-button {
+  border: none;
+  background: transparent;
+  color: #bd4a40;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.empty-preview {
+  padding: 40px !important;
+  text-align: center;
+  color: #8a94a3;
+  font-size: 13px;
+}
+
+.preview-error {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff0ef;
+  border: 1px solid #ffd7d3;
+  color: #bd3e32;
+  font-size: 13px;
+}
+
+.preview-footer {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 20px 22px;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.preview-footer strong {
+  font-size: 13px;
+}
+
+.preview-footer p {
+  margin: 5px 0 0;
+  color: #7b8798;
+  font-size: 11px;
+}
+
+.preview-footer-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-cancel-button,
+.confirm-plan-button {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 17px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.preview-cancel-button {
+  background: #eef0f4;
+  color: #536174;
+}
+
+.confirm-plan-button {
+  background: #172033;
+  color: white;
+}
+
+.confirm-plan-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview-error-card {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.preview-error-card h2 {
+  margin-top: 0;
+}
+
+.preview-error-card p {
+  color: #718096;
+}
+
+.preview-error-card button {
+  border: none;
+  border-radius: 9px;
+  padding: 10px 16px;
+  background: #172033;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .nutrition-preview-page {
+    padding: 20px;
+  }
+
+  .plan-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-card-header,
+  .preview-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-schedule-button,
+  .preview-footer-actions button {
+    width: 100%;
+  }
+
+  .preview-footer-actions {
+    flex-direction: column;
+  }
+}
