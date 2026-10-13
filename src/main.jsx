@@ -5,9 +5,28 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
+const getRouterBasename = () => {
+  const basePath = new URL(
+    import.meta.env.BASE_URL,
+    window.location.origin
+  ).pathname.replace(/\/+$/, "");
+
+  if (
+    !basePath ||
+    (
+      window.location.pathname !== basePath &&
+      !window.location.pathname.startsWith(`${basePath}/`)
+    )
+  ) {
+    return undefined;
+  }
+
+  return basePath;
+};
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={getRouterBasename()}>
       <App />
     </BrowserRouter>
   </StrictMode>
