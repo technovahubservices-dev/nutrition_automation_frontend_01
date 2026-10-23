@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import "./NutritionPlans.css";
@@ -83,7 +83,7 @@ function NutritionPlans() {
           <div className="brand-icon">✚</div>
 
           <div>
-            <h2>NutriCare</h2>
+            <h2>Holistic Healthnook</h2>
             <span>Automation</span>
           </div>
         </div>
@@ -307,5 +307,3 @@ function NutritionPlans() {
 }
 
 export default NutritionPlans;
-
-

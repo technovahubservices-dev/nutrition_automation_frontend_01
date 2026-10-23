@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import "./Schedule.css";
@@ -283,7 +283,7 @@ function Schedule() {
           <div className="brand-icon">✚</div>
 
           <div>
-            <h2>NutriCare</h2>
+            <h2>Holistic Healthnook</h2>
             <span>Automation</span>
           </div>
         </div>
@@ -719,5 +719,3 @@ function Schedule() {
 }
 
 export default Schedule;
-
-

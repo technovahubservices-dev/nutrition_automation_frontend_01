@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import "./Patients.css";
@@ -219,7 +219,7 @@ function Patients() {
           </div>
 
           <div>
-            <h2>NutriCare</h2>
+            <h2>Holistic Healthnook</h2>
             <span>Automation</span>
           </div>
 
@@ -728,6 +728,3 @@ function Patients() {
 }
 
 export default Patients;
-
-
-

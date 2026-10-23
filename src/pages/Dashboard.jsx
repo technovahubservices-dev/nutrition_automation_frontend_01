@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import "./Dashboard.css";
@@ -283,7 +283,7 @@ function Dashboard() {
           </div>
 
           <div>
-            <h2>NutriCare</h2>
+            <h2>Holistic Healthnook</h2>
             <span>Automation</span>
           </div>
         </div>
@@ -790,7 +790,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-
-
-

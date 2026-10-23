@@ -1,4 +1,4 @@
-﻿import {  useEffect, useState , Fragment } from "react";
+import {  useEffect, useState , Fragment } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import api from "../api/api";
 import "./PatientDetails.css";
@@ -9,7 +9,7 @@ function Sidebar({ admin, navigate, logout }) {
       <div className="brand">
         <div className="brand-icon">✚</div>
         <div>
-          <h2>NutriCare</h2>
+          <h2>Holistic Healthnook</h2>
           <span>Automation</span>
         </div>
       </div>
@@ -708,21 +708,3 @@ function PatientDetails() {
 }
 
 export default PatientDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
