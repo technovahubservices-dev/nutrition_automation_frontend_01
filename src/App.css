@@ -455,3 +455,24 @@ td strong {
   color: #bfdbfe;
   font-weight: 700;
 }
+
+.schedule-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.schedule-heading-row h2 { margin: 0; }
+.schedule-add-button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #0b806f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.schedule-add-button:hover { filter: brightness(.95); }
+.schedule-create-panel { margin: 0 0 18px; }

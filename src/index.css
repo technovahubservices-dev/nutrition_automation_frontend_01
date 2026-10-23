@@ -1,4 +1,4 @@
-html,
+﻿html,
 body,
 #root {
   margin: 0;
@@ -21,4 +21,182 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+
+/* ===== Holistic Healthnook premium visual system ===== */
+:root {
+  color-scheme: light;
+  --na-ink: #142b2b;
+  --na-muted: #718786;
+  --na-teal: #087f78;
+  --na-teal-dark: #075b59;
+  --na-mint: #c9f4df;
+  --na-line: #dcebe7;
+  --na-canvas: #eef6f4;
+  --na-card: rgba(255,255,255,.92);
+  --na-shadow: 0 18px 45px rgba(17, 66, 61, .09);
+}
+html { background: var(--na-canvas); }
+body {
+  color: var(--na-ink);
+  background:
+    radial-gradient(ellipse at 8% 0%, rgba(83, 210, 170, .15), transparent 34rem),
+    radial-gradient(ellipse at 100% 10%, rgba(53, 145, 183, .10), transparent 32rem),
+    #f1f7f6;
+  letter-spacing: -.01em;
+}
+button, input, textarea, select { font-family: inherit; }
+button { transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease; }
+button:not(:disabled):hover { transform: translateY(-1px); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(8, 127, 120, .25);
+  outline-offset: 2px;
+}
+.dashboard-shell {
+  background: transparent !important;
+  color: var(--na-ink) !important;
+}
+.sidebar {
+  background: linear-gradient(165deg, #102f32 0%, #12494a 54%, #0b353b 100%) !important;
+  border-right: 0 !important;
+  box-shadow: 12px 0 36px rgba(12, 55, 55, .10);
+  color: #eafff7;
+  z-index: 5;
+}
+.brand { border-bottom-color: rgba(255,255,255,.12) !important; }
+.brand-icon {
+  background: linear-gradient(145deg, #68e4b1, #16a99a) !important;
+  color: #073e3a !important;
+  box-shadow: 0 8px 22px rgba(47, 220, 165, .22);
+}
+.brand h2 { color: #f1fff9 !important; letter-spacing: -.5px; }
+.brand span { color: #a8cbc2 !important; }
+.sidebar-nav { padding-top: 28px !important; }
+.nav-item { color: #b4d1cb !important; border: 1px solid transparent !important; }
+.nav-item:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,.09) !important;
+  border-color: rgba(255,255,255,.07) !important;
+}
+.nav-item.active {
+  color: #eafff7 !important;
+  background: linear-gradient(100deg, rgba(75,220,169,.24), rgba(75,220,169,.08)) !important;
+  border-color: rgba(106,237,190,.22) !important;
+  box-shadow: inset 3px 0 #68e4b1;
+}
+.sidebar-bottom { border-top-color: rgba(255,255,255,.12) !important; }
+.admin-mini strong { color: #f1fff9; }
+.admin-mini span { color: #a8cbc2 !important; }
+.admin-avatar, .header-avatar {
+  background: linear-gradient(145deg, #d1fae5, #8ce6c4) !important;
+  color: #075b59 !important;
+}
+.logout-button {
+  background: rgba(255,255,255,.07) !important;
+  border-color: rgba(255,255,255,.13) !important;
+  color: #d4eae4 !important;
+}
+.logout-button:hover { background: rgba(255,90,105,.14) !important; color: #fff !important; }
+.dashboard-main, .patients-main, .nutrition-plans-main, .schedule-main,
+.patient-details-main, .nutrition-plan-upload-main, .nutrition-plan-preview-main,
+.reminder-history-main {
+  background: transparent !important;
+}
+.dashboard-main { padding-top: 38px !important; }
+.dashboard-header h1, .page-header h1 {
+  color: #123638 !important;
+  letter-spacing: -1px !important;
+  font-weight: 800 !important;
+}
+.header-description, .page-header p { color: #6c8582 !important; }
+.eyebrow, .modal-eyebrow {
+  color: #07877b !important;
+  letter-spacing: 1.7px !important;
+}
+.stats-grid { gap: 20px !important; }
+.stat-card, .panel, .patients-card, .plans-card, .schedule-card,
+.patient-modal, .plans-state, .schedule-state, .empty-plans, .empty-schedule {
+  border: 1px solid rgba(198, 222, 216, .85) !important;
+  border-radius: 20px !important;
+  background: var(--na-card) !important;
+  box-shadow: var(--na-shadow) !important;
+  backdrop-filter: blur(12px);
+}
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  padding: 23px !important;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.stat-card::after {
+  content: "";
+  position: absolute;
+  right: -27px;
+  top: -34px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(113,232,190,.18), rgba(22,169,154,.04));
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 22px 48px rgba(17,66,61,.14) !important; }
+.stat-card strong { color: #123638 !important; font-size: 30px !important; letter-spacing: -1px; }
+.stat-card span { color: #67817e !important; }
+.stat-icon { border-radius: 15px !important; }
+.patients-icon { background: #e0f5f0 !important; color: #087f78 !important; }
+.plans-icon { background: #fff0d8 !important; color: #a96812 !important; }
+.reminder-icon { background: #e9e5ff !important; color: #6d56bd !important; }
+.sent-icon { background: #d9f8e8 !important; color: #07805f !important; }
+.panel-header, .plans-card-header, .schedule-card-header {
+  border-bottom-color: #e6f0ed !important;
+}
+.panel-header h2, .plans-card-header h2, .schedule-card-header h2 { color: #153b3b !important; }
+.count-badge, .repeat-badge { background: #dff7ee !important; color: #087f78 !important; }
+table th, .plans-table th, .schedule-table th, .patients-table th {
+  background: #edf7f4 !important;
+  color: #587773 !important;
+  letter-spacing: .7px;
+}
+table td, .plans-table td, .schedule-table td, .patients-table td {
+  border-top-color: #edf3f1 !important;
+  border-bottom-color: #edf3f1 !important;
+}
+table tbody tr:hover, .plans-table tbody tr:hover, .schedule-table tbody tr:hover,
+.patients-table tbody tr:hover { background: #f2fbf8 !important; }
+input, select, textarea {
+  border-color: #d1e3de !important;
+  border-radius: 11px !important;
+  background-color: #fbfefd;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #159e8d !important;
+  box-shadow: 0 0 0 4px rgba(21,158,141,.12) !important;
+}
+.refresh-button, .view-patient-button, .action-view, .edit-button,
+.cancel-button, .schedule-edit-cancel {
+  border-color: #cfe3dc !important;
+  border-radius: 10px !important;
+  background: #f8fcfa !important;
+  color: #24635c !important;
+}
+.save-patient-button, .schedule-edit-save, .empty-plans button, .empty-schedule button {
+  background: linear-gradient(110deg, #087f78, #16a99a) !important;
+  box-shadow: 0 8px 18px rgba(8,127,120,.18);
+  border-radius: 10px !important;
+}
+.status-processed, .patient-active, .whatsapp-on { background: #dff8eb !important; color: #087653 !important; }
+.modal-overlay, .schedule-edit-overlay { background: rgba(8, 35, 38, .58) !important; backdrop-filter: blur(5px); }
+.patient-modal, .schedule-edit-modal { border-radius: 22px !important; }
+@media (max-width: 1000px) {
+  .dashboard-main { padding: 26px 22px 40px !important; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .dashboard-shell { display: block !important; }
+  .sidebar { position: relative !important; width: 100% !important; min-height: auto !important; height: auto !important; }
+  .brand { height: 72px !important; }
+  .sidebar-nav { padding: 10px !important; display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .sidebar-bottom { padding: 10px !important; }
+  .dashboard-main, .patients-main, .nutrition-plans-main, .schedule-main { padding: 20px 14px 32px !important; }
+  .stats-grid { grid-template-columns: 1fr !important; }
 }

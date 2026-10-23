@@ -124,9 +124,18 @@ function Schedule() {
   }, [schedules]);
 
   const formatTime = (time) => {
-    return time || "—";
-  };
+    const match = String(time || "").match(/^(\d{1,2}):(\d{2})$/);
+    if (!match) return time || "—";
 
+    const date = new Date();
+    date.setHours(Number(match[1]), Number(match[2]), 0, 0);
+
+    return date.toLocaleTimeString("en-IN", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+  };
   const getRepeatLabel = (repeat) => {
     return repeat === "once" ? "Once" : "Daily";
   };
@@ -240,7 +249,7 @@ function Schedule() {
 
   const handleDelete = async (schedule) => {
     const confirmed = window.confirm(
-      `Delete "${schedule.activity}" at ${schedule.time}?`
+      `Delete "${schedule.activity}" at ${formatScheduleTime(schedule.time)}?`
     );
 
     if (!confirmed) {
@@ -429,7 +438,6 @@ function Schedule() {
                     <th>Time</th>
                     <th>Activity</th>
                     <th>Message</th>
-                    <th>Repeat</th>
                     <th>WhatsApp</th>
                     <th>Status</th>
                     <th>Actions</th>
@@ -483,14 +491,6 @@ function Schedule() {
                             title={schedule.message}
                           >
                             {schedule.message}
-                          </span>
-                        </td>
-
-                        <td>
-                          <span className="repeat-badge">
-                            {getRepeatLabel(
-                              schedule.repeat
-                            )}
                           </span>
                         </td>
 
@@ -719,3 +719,5 @@ function Schedule() {
 }
 
 export default Schedule;
+
+

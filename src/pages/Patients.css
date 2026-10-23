@@ -1,4 +1,4 @@
-﻿.patients-page {
+.patients-page {
   padding: 34px 40px 50px;
   min-height: 100vh;
   background: #f5f7f6;
@@ -549,3 +549,7 @@
     padding: 18px;
   }
 }
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }

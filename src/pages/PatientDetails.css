@@ -392,3 +392,328 @@
     align-items: flex-start;
   }
 }
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }
+
+/* Inline reminder schedule editor */
+.schedule-edit-button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.schedule-edit-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 12px 0 18px;
+  padding: 16px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.schedule-edit-panel h3,
+.schedule-edit-error {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.schedule-edit-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+.schedule-edit-panel input:not([type="checkbox"]) {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+.schedule-edit-panel .schedule-edit-check {
+  flex-direction: row;
+  align-items: center;
+}
+.schedule-edit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+}
+.schedule-edit-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 13px;
+  cursor: pointer;
+}
+.schedule-edit-error { color: #b91c1c; }
+
+/* Reminder schedule delete action */
+.schedule-delete-button {
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff;
+  color: #b42318;
+  padding: 7px 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.schedule-delete-button:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+.schedule-delete-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Explicit 12-hour reminder time picker */
+.time-picker-row {
+  display: grid;
+  grid-template-columns: minmax(60px, 1fr) auto minmax(60px, 1fr) minmax(76px, 0.9fr);
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.time-picker-row select {
+  min-width: 0;
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid #d6e0eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+.time-picker-colon {
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* ===== Layout fix: reminder schedule rows and create form ===== */
+
+/* Keep WhatsApp, Edit and Delete together on wide screens. */
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.schedule-actions > button,
+.schedule-actions > .whatsapp-badge {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.schedule-row {
+  grid-template-columns: 150px minmax(0, 1fr) 265px;
+  column-gap: 20px;
+}
+
+.schedule-actions .schedule-edit-button,
+.schedule-actions .schedule-delete-button {
+  box-sizing: border-box;
+  min-height: 36px;
+  padding: 7px 10px;
+}
+
+/* Give the create form predictable space for each field. */
+.schedule-create-panel {
+  grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(180px, 1.2fr)
+    minmax(155px, 1fr)
+    minmax(130px, 0.85fr);
+  align-items: end;
+  column-gap: 12px;
+  row-gap: 16px;
+}
+
+.schedule-create-panel > label {
+  min-width: 0;
+}
+
+.schedule-create-panel > label > input:not([type="checkbox"]),
+.schedule-create-panel .time-picker-row {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.schedule-create-panel .schedule-edit-check {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.schedule-create-panel .schedule-edit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 1100px) {
+  .schedule-row {
+    grid-template-columns: 125px minmax(0, 1fr) 245px;
+    column-gap: 12px;
+  }
+
+  .schedule-create-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .schedule-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 12px;
+  }
+
+  .schedule-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .schedule-create-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .schedule-create-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ===== Layout fix: reminder schedule rows and create form ===== */
+
+/* Keep WhatsApp, Edit and Delete together on wide screens. */
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.schedule-actions > button,
+.schedule-actions > .whatsapp-badge {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.schedule-row {
+  grid-template-columns: 150px minmax(0, 1fr) 265px;
+  column-gap: 20px;
+}
+
+.schedule-actions .schedule-edit-button,
+.schedule-actions .schedule-delete-button {
+  box-sizing: border-box;
+  min-height: 36px;
+  padding: 7px 10px;
+}
+
+/* Give the create form predictable space for each field. */
+.schedule-create-panel {
+  grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(180px, 1.2fr)
+    minmax(155px, 1fr)
+    minmax(130px, 0.85fr);
+  align-items: end;
+  column-gap: 12px;
+  row-gap: 16px;
+}
+
+.schedule-create-panel > label {
+  min-width: 0;
+}
+
+.schedule-create-panel > label > input:not([type="checkbox"]),
+.schedule-create-panel .time-picker-row {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.schedule-create-panel .schedule-edit-check {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.schedule-create-panel .schedule-edit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 1100px) {
+  .schedule-row {
+    grid-template-columns: 125px minmax(0, 1fr) 245px;
+    column-gap: 12px;
+  }
+
+  .schedule-create-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .schedule-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 12px;
+  }
+
+  .schedule-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .schedule-create-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .schedule-create-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

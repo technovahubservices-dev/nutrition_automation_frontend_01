@@ -1,4 +1,4 @@
-﻿.dashboard-shell {
+.dashboard-shell {
   min-height: 100vh;
   display: flex;
   background: #f5f7f6;
@@ -627,3 +627,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }

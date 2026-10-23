@@ -1,4 +1,4 @@
-﻿.reminder-history-page {
+.reminder-history-page {
   min-height: 100vh;
   display: flex;
   background: #f7f8fc;
@@ -415,4 +415,65 @@
   .reminder-stats {
     grid-template-columns: 1fr;
   }
+}
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }
+
+/* ===== Consistent dark teal sidebar theme ===== */
+.reminder-sidebar {
+  background: linear-gradient(180deg, #103b3d 0%, #104747 100%) !important;
+  color: #e6f5f1 !important;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.reminder-sidebar .sidebar-brand strong {
+  color: #f3fffc !important;
+}
+
+.reminder-sidebar .sidebar-brand span {
+  color: #a9c9c4 !important;
+}
+
+.reminder-sidebar .sidebar-nav .nav-item {
+  color: #b9d5d0 !important;
+  background: transparent !important;
+  border-radius: 10px;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.reminder-sidebar .sidebar-nav .nav-item:hover {
+  background: rgba(255,255,255,0.09) !important;
+  color: #ffffff !important;
+}
+
+.reminder-sidebar .sidebar-nav .nav-item.active {
+  background: rgba(52, 211, 153, 0.16) !important;
+  color: #ffffff !important;
+  box-shadow: inset 3px 0 #5ee6b4;
+}
+
+.reminder-sidebar .sidebar-nav .nav-item span {
+  color: inherit !important;
+}
+
+.reminder-sidebar .sidebar-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: #e6f5f1 !important;
+}
+
+.reminder-sidebar .sidebar-bottom strong,
+.reminder-sidebar .sidebar-bottom span {
+  color: inherit !important;
+}
+
+.reminder-sidebar .sidebar-bottom button {
+  color: #e6f5f1 !important;
+  background: rgba(255,255,255,0.07) !important;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.reminder-sidebar .sidebar-bottom button:hover {
+  background: rgba(255,255,255,0.14) !important;
 }

@@ -1,4 +1,4 @@
-﻿.nutrition-plans-main {
+.nutrition-plans-main {
   flex: 1;
   min-width: 0;
   min-height: 100vh;
@@ -319,3 +319,7 @@
     align-items: flex-start;
   }
 }
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }

@@ -1,4 +1,4 @@
-﻿.nutrition-upload-page {
+.nutrition-upload-page {
   min-height: 100vh;
   padding: 32px;
   background: #f7f8fa;
@@ -236,3 +236,7 @@
     width: 100%;
   }
 }
+
+/* Shared premium page polish */
+.page-header, .dashboard-header { gap: 18px; }
+.page-header h1, .dashboard-header h1 { letter-spacing: -1px; }

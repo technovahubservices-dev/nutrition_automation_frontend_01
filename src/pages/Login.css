@@ -110,3 +110,117 @@
   color: #9ca3af;
   font-size: 12px;
 }
+
+/* Premium login redesign */
+.login-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(90, 236, 183, .32), transparent 34%),
+    radial-gradient(ellipse at 85% 80%, rgba(68, 166, 213, .25), transparent 35%),
+    linear-gradient(135deg, #092f35 0%, #0b5554 48%, #087f78 100%) !important;
+  padding: 32px !important;
+}
+.login-page::before, .login-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.login-page::before { width: 620px; height: 620px; top: -290px; right: -120px; box-shadow: 0 0 0 45px rgba(255,255,255,.025), 0 0 0 95px rgba(255,255,255,.02); }
+.login-page::after { width: 460px; height: 460px; bottom: -280px; left: -90px; box-shadow: 0 0 0 35px rgba(255,255,255,.025), 0 0 0 75px rgba(255,255,255,.02); }
+.login-card {
+  position: relative;
+  width: min(100%, 460px) !important;
+  padding: 44px !important;
+  border: 1px solid rgba(255,255,255,.65) !important;
+  border-radius: 28px !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 35px 100px rgba(1, 27, 31, .35), 0 4px 16px rgba(255,255,255,.18) inset !important;
+  backdrop-filter: blur(20px);
+  animation: loginRise .6s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes loginRise { from { opacity: 0; transform: translateY(18px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.login-icon {
+  width: 76px !important; height: 76px !important;
+  border-radius: 24px !important;
+  background: linear-gradient(145deg, #d7fff0, #8ce6c4) !important;
+  box-shadow: 0 12px 26px rgba(8,127,120,.18);
+}
+.login-header h1 { color: #123638 !important; font-size: clamp(24px, 4vw, 29px) !important; letter-spacing: -1px; }
+.login-header p { color: #66817d !important; }
+.login-header { margin-bottom: 34px !important; }
+.form-group label { color: #254947 !important; font-size: 13px !important; font-weight: 700 !important; }
+.form-group input {
+  min-height: 50px;
+  padding: 14px 15px !important;
+  background: #f7fbfa !important;
+  border: 1px solid #d6e7e2 !important;
+  border-radius: 12px !important;
+  color: #173d3b !important;
+  font-size: 14px !important;
+}
+.form-group input::placeholder { color: #9ab0ac; }
+.password-input-wrap { position: relative; }
+.password-input-wrap input { padding-right: 52px !important; }
+.password-visibility-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #5e817c;
+  cursor: pointer;
+}
+.password-visibility-button:hover { background: #e7f5f0; color: #087f78; transform: translateY(-50%); }
+.password-visibility-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.login-button {
+  min-height: 52px;
+  margin-top: 4px;
+  background: linear-gradient(110deg, #087f78, #16a99a) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 22px rgba(8,127,120,.22);
+  letter-spacing: .01em;
+}
+.login-button:hover { box-shadow: 0 14px 26px rgba(8,127,120,.3); filter: brightness(1.04); }
+.login-error { border-radius: 12px !important; }
+.login-footer { color: #819b96 !important; line-height: 1.6; }
+@media (max-width: 520px) {
+  .login-page { padding: 18px !important; }
+  .login-card { padding: 30px 23px !important; border-radius: 22px !important; }
+}
+
+
+/* Fix: keep password visibility icon stationary on hover */
+.password-visibility-button,
+.password-visibility-button:hover,
+.password-visibility-button:focus,
+.password-visibility-button:active {
+  transform: translateY(-50%) !important;
+  animation: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+.password-visibility-button svg {
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
